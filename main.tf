@@ -22,7 +22,7 @@ resource "aws_lambda_function" "example" {
   source_code_hash = filebase64sha256("lambda_function.zip")
 }
 
-/generate a code snippet for an AWS IAM role using Terraform
+//generate a code snippet for an AWS IAM role using Terraform
 resource "aws_iam_role" "lambda_exec" {
   name = "lambda_exec_role"
 
@@ -45,7 +45,7 @@ resource "aws_db_instance" "example" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  name                 = "exampledb"
+  db_name              = "exampledb"
   username             = "admin"
   password             = "password"
   parameter_group_name = "default.mysql5.7"
