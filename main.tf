@@ -39,3 +39,14 @@ resource "aws_iam_role" "lambda_exec" {
     ]
   })
 }
+// generate a code snippet for an AWS RDS instance using Terraform
+resource "aws_db_instance" "example" {
+  allocated_storage    = 20
+  engine               = "mysql"
+  engine_version       = "5.7"
+  instance_class       = "db.t2.micro"
+  name                 = "exampledb"
+  username             = "admin"
+  password             = "password"
+  parameter_group_name = "default.mysql5.7"
+}
